@@ -173,16 +173,16 @@ export default function Home() {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <Link href="https://www.linkedin.com/in/moiz-chaudhry" target="_blank" rel="noopener noreferrer">
+            <Link href="https://www.linkedin.com/in/moiz-chaudhry-/" target="_blank" rel="noopener noreferrer">
               <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/moiz_headshot.JPG-R6I46Xr87WQhXpbwxIkrZ6JlbI7p4J.jpeg"
+                src="/moiz_headshot.JPG"
                 alt="Moiz Chaudhry"
                 width={250}
                 height={250}
                 className="rounded-full mx-auto mb-6 object-cover aspect-square"
               />
             </Link>
-            <Link href="https://www.linkedin.com/in/moiz-chaudhry" target="_blank" rel="noopener noreferrer">
+            <Link href="https://www.linkedin.com/in/moiz-chaudhry-/" target="_blank" rel="noopener noreferrer">
               <h3 className="text-2xl font-semibold mb-2 font-['Ogg']">Moiz Chaudhry</h3>
             </Link>
             <p className="text-lg mb-2">President</p>
@@ -197,54 +197,54 @@ export default function Home() {
                 role: "VP of Events",
                 email: "otinpaw@terpmail.umd.edu",
                 image:
-                  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/olevia_headshot%20(1)-FSFM3ZkAYcs9dfYr7014y3WTucI516.png",
-                linkedin: "https://www.linkedin.com/in/olevia-tinpaw",
+                  "/olevia_headshot.png",
+                linkedin: "https://www.linkedin.com/in/olevia-tinpaw-a115451aa/",
               },
               {
                 name: "Krisha Mahadevia",
                 role: "VP of Finance",
                 email: "kmahade1@terpmail.umd.edu",
                 image:
-                  "/home/carte/umdBitsSite/public/placeholder.jpg", // Using Moiz's photo as placeholder
-                linkedin: "https://www.linkedin.com/in/krisha-mahadevia",
+                  "/placeholder.jpg", // Using Moiz's photo as placeholder
+                linkedin: "https://www.linkedin.com/in/krisha-mahadevia/",
               },
               {
                 name: "Rudra Soni",
                 role: "VP of Marketing",
                 email: "rsoni@terpmail.umd.edu",
                 image:
-                  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/rudra_headshot-X6WxUAMikSGyBG3aXmx1Mp8hryJUTP.png",
-                linkedin: "https://www.linkedin.com/in/rudra-soni",
+                  "/rudra_headshot.png",
+                linkedin: "https://www.linkedin.com/in/rudra-soni/",
               },
               {
                 name: "Abigail Richman",
                 role: "VP of Membership",
                 email: "arich5@terpmail.umd.edu",
                 image:
-                  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/abby-attooKgpELTaV8ilSa3yAxAUD5NzUi.webp",
-                linkedin: "https://www.linkedin.com/in/abigail-richman",
+                  "/abby.webp",
+                linkedin: "https://www.linkedin.com/company/umd-bits/",
               },
               {
                 name: "Mohnish Mahajan",
                 role: "VP of Content",
                 email: "mmahaja1@terpmail.umd.edu",
                 image:
-                  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/mohnish_headshot.jpg-KkqGMu9RVvWnhKqRVhQPooeYgmOPIt.jpeg",
-                linkedin: "https://www.linkedin.com/in/mohnish-mahajan",
+                  "/mohnish_headshot.jpg",
+                linkedin: "https://www.linkedin.com/in/mohnish-mahajan/",
                 subVP: {
                   name: "Vishesh Khare",
                   role: "Sub-VP of Content",
                   email: "vkhare@terpmail.umd.edu",
-                  linkedin: "https://www.linkedin.com/in/vishesh-khare",
+                  linkedin: "https://www.linkedin.com/in/vishesh-khare-b17875211/",
                 },
               },
               {
                 name: "Carter Pry",
-                role: "VP of Tech",
+                role: "VP of Technology",
                 email: "cpry@terpmail.umd.edu",
                 image:
-                  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/moiz_headshot.JPG-R6I46Xr87WQhXpbwxIkrZ6JlbI7p4J.jpeg", // Using Moiz's photo as placeholder
-                linkedin: "https://www.linkedin.com/in/carter-pry",
+                  "/carterpry_headshot2.png", // Using Moiz's photo as placeholder
+                linkedin: "https://www.linkedin.com/in/carterpry",
               },
             ].map((leader, index) => (
               <motion.div
@@ -290,7 +290,7 @@ export default function Home() {
           >
             <Link href="https://www.linkedin.com/in/hassan-ibrahim-98a4637/" target="_blank" rel="noopener noreferrer">
               <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/hassan_headshot.jpg-BrxYfXO1ShNHejXFtxvW8QJYG8XUEi.jpeg"
+                src="/hassan_headshot.jpg"
                 alt="Hassan Ibrahim"
                 width={200}
                 height={200}
@@ -310,6 +310,7 @@ export default function Home() {
       <footer className="bg-[#4A0E0E] text-[#F5F5F5] py-12">
         <div className="container mx-auto px-6 text-center">
           <p className="mb-4">&copy; {new Date().getFullYear()} UMD BITS. All rights reserved and found <Link href="https://github.com/CarterPry/UMD-BITS/blob/main/LICENSE">here.</Link></p>
+          <p className="mb-"><Link href="https://github.com/CarterPry">Development of this site can be found here.</Link></p>
           <p className="text-[#F5F5F5]/60 mb-4">University of Maryland, College Park</p>
           <div className="flex justify-center space-x-6 mb-8">
             <Link href="https://www.instagram.com/umdbits" className="hover:opacity-75 transition-opacity">
@@ -325,7 +326,7 @@ export default function Home() {
                 <path d="M 16 3 C 8.8324839 3 3 8.8324839 3 16 L 3 34 C 3 41.167516 8.8324839 47 16 47 L 34 47 C 41.167516 47 47 41.167516 47 34 L 47 16 C 47 8.8324839 41.167516 3 34 3 L 16 3 z M 16 5 L 34 5 C 40.086484 5 45 9.9135161 45 16 L 45 34 C 45 40.086484 40.086484 45 34 45 L 16 45 C 9.9135161 45 5 40.086484 5 34 L 5 16 C 5 9.9135161 9.9135161 5 16 5 z M 37 11 A 2 2 0 0 0 35 13 A 2 2 0 0 0 37 15 A 2 2 0 0 0 39 13 A 2 2 0 0 0 37 11 z M 25 14 C 18.936712 14 14 18.936712 14 25 C 14 31.063288 18.936712 36 25 36 C 31.063288 36 36 31.063288 36 25 C 36 18.936712 31.063288 14 25 14 z M 25 16 C 29.982407 16 34 20.017593 34 25 C 34 29.982407 29.982407 34 25 34 C 20.017593 34 16 29.982407 16 25 C 16 20.017593 20.017593 16 25 16 z" />
               </svg>
             </Link>
-            <Link href="https://github.com/umdbits" className="hover:opacity-75 transition-opacity">
+            <Link href="https://github.com/UMD-BITS" className="hover:opacity-75 transition-opacity">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 x="0px"
@@ -360,7 +361,7 @@ export default function Home() {
                 <path d="M 5.9199219 6 L 20.582031 27.375 L 6.2304688 44 L 9.4101562 44 L 21.986328 29.421875 L 31.986328 44 L 44 44 L 28.681641 21.669922 L 42.199219 6 L 39.029297 6 L 27.275391 19.617188 L 17.933594 6 L 5.9199219 6 z M 9.7167969 8 L 16.880859 8 L 40.203125 42 L 33.039062 42 L 9.7167969 8 z" />
               </svg>
             </Link>
-            <Link href="https://groupme.com/join_group/YOUR_GROUP_ID" className="hover:opacity-75 transition-opacity">
+            <Link href="https://groupme.com/join_group/44966964/6laymmdX" className="hover:opacity-75 transition-opacity">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="48"
