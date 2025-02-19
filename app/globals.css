@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+    font-family: "Miller Text Italic";
+    src: url("https://db.onlinewebfonts.com/t/81110875d397630f6e092c5dfb9566da.eot");
+    src: url("https://db.onlinewebfonts.com/t/81110875d397630f6e092c5dfb9566da.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/81110875d397630f6e092c5dfb9566da.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/81110875d397630f6e092c5dfb9566da.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/81110875d397630f6e092c5dfb9566da.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/81110875d397630f6e092c5dfb9566da.svg#Miller Text Italic")format("svg");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+  --background: 245, 245, 245;
+  --foreground: 74, 14, 14;
+}
+
+body {
+  color: rgb(var(--foreground));
+  background: rgb(var(--background));
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
