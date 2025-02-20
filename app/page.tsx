@@ -90,9 +90,9 @@ export default function Home() {
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-8 font-['Ogg']">About UMD BITS</h2>
             <p className="text-xl leading-relaxed mb-12">
-              UMD BITS is a prestigious student organization at the University of Maryland that bridges the gap between
-              business and technology. We provide our members with valuable insights, skills, and networking
-              opportunities in the ever-evolving world of business information systems.
+              BITS is a student organization at the University of Maryland that bridges the gap between
+              business analytics and computing technology. We provide our members with workshops, networking
+              opportunities, and hosted events in the consistently volatile world of business information systems.
             </p>
           </motion.div>
         </div>
@@ -205,7 +205,7 @@ export default function Home() {
                 role: "VP of Finance",
                 email: "kmahade1@terpmail.umd.edu",
                 image:
-                  "/placeholder.jpg", // Using Moiz's photo as placeholder
+                  "/krisha_headshot.png",
                 linkedin: "https://www.linkedin.com/in/krisha-mahadevia/",
               },
               {
