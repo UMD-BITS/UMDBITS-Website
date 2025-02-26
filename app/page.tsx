@@ -217,12 +217,12 @@ export default function Home() {
                 linkedin: "https://www.linkedin.com/in/rudra-soni/",
               },
               {
-                name: "Abigail Richman",
+                name: "Abigail Richard",
                 role: "VP of Membership",
                 email: "arich5@terpmail.umd.edu",
                 image:
                   "/abby.webp",
-                linkedin: "https://www.linkedin.com/company/umd-bits/",
+                linkedin: "https://www.linkedin.com/in/abbyrichard/",
               },
               {
                 name: "Mohnish Mahajan",
