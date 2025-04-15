@@ -3,11 +3,12 @@
 import Image from "next/image"
 import Link from "next/link"
 import { motion } from "framer-motion"
-import { Menu } from "lucide-react"
+import { Menu, ChevronUp } from "lucide-react"
 import { useState, useEffect } from "react"
 
 export default function Home() {
   const [isScrolled, setIsScrolled] = useState(false)
+  const [showScrollTop, setShowScrollTop] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,11 +17,24 @@ export default function Home() {
       } else {
         setIsScrolled(false)
       }
+      
+      if (window.scrollY > 500) {
+        setShowScrollTop(true)
+      } else {
+        setShowScrollTop(false)
+      }
     }
 
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    })
+  }
 
   return (
     <div className="min-h-screen bg-[#F5F5F5] text-[#4A0E0E] font-['Playfair_Display']">
@@ -35,13 +49,40 @@ export default function Home() {
             UMD BITS
           </Link>
           <div className="hidden md:flex space-x-8">
-            <Link href="#about" className="hover:opacity-75 transition-opacity">
+            <Link 
+              href="#about" 
+              className="text-lg hover:opacity-75 hover:scale-105 transition-all duration-300"
+              onClick={(e) => {
+                e.preventDefault();
+                document.querySelector('#about')?.scrollIntoView({
+                  behavior: 'smooth'
+                });
+              }}
+            >
               About
             </Link>
-            <Link href="#activities" className="hover:opacity-75 transition-opacity">
+            <Link 
+              href="#activities" 
+              className="text-lg hover:opacity-75 hover:scale-105 transition-all duration-300"
+              onClick={(e) => {
+                e.preventDefault();
+                document.querySelector('#activities')?.scrollIntoView({
+                  behavior: 'smooth'
+                });
+              }}
+            >
               Activities
             </Link>
-            <Link href="#leadership" className="hover:opacity-75 transition-opacity">
+            <Link 
+              href="#leadership" 
+              className="text-lg hover:opacity-75 hover:scale-105 transition-all duration-300"
+              onClick={(e) => {
+                e.preventDefault();
+                document.querySelector('#leadership')?.scrollIntoView({
+                  behavior: 'smooth'
+                });
+              }}
+            >
               Leadership
             </Link>
           </div>
@@ -62,8 +103,14 @@ export default function Home() {
           <h1 className="text-5xl md:text-7xl font-bold mb-4 font-['Ogg']">University of Maryland</h1>
           <p className="text-5xl md:text-6xl mb-8 font-['Ogg']">Business & IT Society</p>
           <Link
-            href="https://terplink.umd.edu/organization/business-information-technology-society"
+            href="#about"
             className="inline-block px-8 py-3 border border-[#F5F5F5] rounded-full hover:bg-[#F5F5F5] hover:text-[#4A0E0E] transition-colors"
+            onClick={(e) => {
+              e.preventDefault();
+              document.querySelector('#about')?.scrollIntoView({
+                behavior: 'smooth'
+              });
+            }}
           >
             Discover More
           </Link>
@@ -166,85 +213,71 @@ export default function Home() {
             Our Leadership
           </motion.h2>
 
-          {/* President - Centered */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <Link href="https://www.linkedin.com/in/moiz-chaudhry-/" target="_blank" rel="noopener noreferrer">
-              <Image
-                src="/moiz_headshot.JPG"
-                alt="Moiz Chaudhry"
-                width={250}
-                height={250}
-                className="rounded-full mx-auto mb-6 object-cover aspect-square"
-              />
-            </Link>
-            <Link href="https://www.linkedin.com/in/moiz-chaudhry-/" target="_blank" rel="noopener noreferrer">
-              <h3 className="text-2xl font-semibold mb-2 font-['Ogg']">Moiz Chaudhry</h3>
-            </Link>
-            <p className="text-lg mb-2">President</p>
-            <p className="text-[#4A0E0E]/80">mchaudh7@terpmail.umd.edu</p>
-          </motion.div>
-
-          {/* VPs Grid */}
+          {/* Team Members Grid */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
             {[
               {
+                name: "Moiz Chaudhry",
+                role: "Team Member",
+                email: "mchaudh7@terpmail.umd.edu",
+                image: "/moiz_headshot.JPG",
+                linkedin: "https://www.linkedin.com/in/moiz-chaudhry-/",
+              },
+              {
                 name: "Olevia Tinpaw",
-                role: "VP of Events",
+                role: "Team Member",
                 email: "otinpaw@terpmail.umd.edu",
-                image:
-                  "/olevia_headshot.png",
+                image: "/olevia_headshot.png",
                 linkedin: "https://www.linkedin.com/in/olevia-tinpaw-a115451aa/",
               },
               {
-                name: "Krisha Mahadevia",
-                role: "VP of Finance",
-                email: "kmahade1@terpmail.umd.edu",
-                image:
-                  "/krisha_headshot.png",
-                linkedin: "https://www.linkedin.com/in/krisha-mahadevia/",
-              },
-              {
-                name: "Rudra Soni",
-                role: "VP of Marketing",
-                email: "rsoni@terpmail.umd.edu",
-                image:
-                  "/rudra_headshot.png",
-                linkedin: "https://www.linkedin.com/in/rudra-soni/",
-              },
-              {
                 name: "Abigail Richard",
-                role: "VP of Membership",
+                role: "Team Member",
                 email: "arich5@terpmail.umd.edu",
-                image:
-                  "/abby.webp",
+                image: "/abby.webp",
                 linkedin: "https://www.linkedin.com/in/abbyrichard/",
               },
               {
-                name: "Mohnish Mahajan",
-                role: "VP of Content",
-                email: "mmahaja1@terpmail.umd.edu",
-                image:
-                  "/mohnish_headshot.jpeg",
-                linkedin: "https://www.linkedin.com/in/mohnish-mahajan/",
-                subVP: {
-                  name: "Vishesh Khare",
-                  role: "Sub-VP of Content",
-                  email: "vkhare@terpmail.umd.edu",
-                  linkedin: "https://www.linkedin.com/in/vishesh-khare-b17875211/",
-                },
+                name: "Carter Pry",
+                role: "Team Member",
+                email: "cpry@terpmail.umd.edu",
+                image: "/carterpry_headshot2.png",
+                linkedin: "https://www.linkedin.com/in/carterpry",
               },
               {
-                name: "Carter Pry",
-                role: "VP of Technology",
-                email: "cpry@terpmail.umd.edu",
-                image:
-                  "/carterpry_headshot2.png", // Using Moiz's photo as placeholder
-                linkedin: "https://www.linkedin.com/in/carterpry",
+                name: "Rudra Soni",
+                role: "Team Member",
+                email: "rsoni@terpmail.umd.edu",
+                image: "/rudra_headshot.png",
+                linkedin: "https://www.linkedin.com/in/rudra-soni/",
+              },
+              {
+                name: "Krisha Mahadevia",
+                role: "Team Member",
+                email: "kmahade1@terpmail.umd.edu",
+                image: "/krisha_headshot.png",
+                linkedin: "https://www.linkedin.com/in/krisha-mahadevia/",
+              },
+              {
+                name: "Vishesh Khare",
+                role: "Team Member",
+                email: "vkhare@terpmail.umd.edu",
+                image: "/vishesh_headshot.jpg",
+                linkedin: "https://www.linkedin.com/in/vishesh-khare-b17875211/",
+              },
+              {
+                name: "Mohnish Mahajan",
+                role: "Team Member",
+                email: "mmahaja1@terpmail.umd.edu",
+                image: "/mohnish_headshot.jpeg",
+                linkedin: "https://www.linkedin.com/in/mohnish-mahajan/",
+              },
+              {
+                name: "Hassan Ibrahim",
+                role: "Team Member",
+                email: "hibrahim@umd.edu",
+                image: "/hassan_headshot.jpg",
+                linkedin: "https://www.linkedin.com/in/hassan-ibrahim-98a4637/",
               },
             ].map((leader, index) => (
               <motion.div
@@ -268,41 +301,9 @@ export default function Home() {
                 </Link>
                 <p className="text-lg mb-2">{leader.role}</p>
                 <p className="text-[#4A0E0E]/80 mb-4">{leader.email}</p>
-                {leader.subVP && (
-                  <div className="mt-4 pt-4 border-t border-[#4A0E0E]/20">
-                    <Link href={leader.subVP.linkedin} target="_blank" rel="noopener noreferrer">
-                      <h4 className="text-lg font-semibold mb-1">{leader.subVP.name}</h4>
-                    </Link>
-                    <p className="text-sm mb-1">{leader.subVP.role}</p>
-                    <p className="text-sm text-[#4A0E0E]/80">{leader.subVP.email}</p>
-                  </div>
-                )}
               </motion.div>
             ))}
           </div>
-
-          {/* Faculty Advisor */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mt-16"
-          >
-            <Link href="https://www.linkedin.com/in/hassan-ibrahim-98a4637/" target="_blank" rel="noopener noreferrer">
-              <Image
-                src="/hassan_headshot.jpg"
-                alt="Hassan Ibrahim"
-                width={200}
-                height={200}
-                className="rounded-full mx-auto mb-6 object-cover aspect-square"
-              />
-            </Link>
-            <Link href="https://www.linkedin.com/in/hassan-ibrahim-98a4637/" target="_blank" rel="noopener noreferrer">
-              <h3 className="text-2xl font-semibold mb-2 font-['Ogg']">Hassan Ibrahim</h3>
-            </Link>
-            <p className="text-lg mb-2">Faculty Advisor</p>
-            <p className="text-[#4A0E0E]/80">hibrahim@umd.edu</p>
-          </motion.div>
         </div>
       </section>
 
@@ -383,6 +384,17 @@ export default function Home() {
           </div>
         </div>
       </footer>
+      
+      {/* Scroll to top button */}
+      <button
+        onClick={scrollToTop}
+        className={`fixed bottom-8 right-8 z-50 p-3 rounded-full bg-[#4A0E0E] text-white shadow-lg hover:bg-[#3A0E0E] transition-all duration-300 ${
+          showScrollTop ? 'opacity-100 scale-100' : 'opacity-0 scale-75 pointer-events-none'
+        }`}
+        aria-label="Scroll to top"
+      >
+        <ChevronUp size={24} />
+      </button>
     </div>
   )
 }
