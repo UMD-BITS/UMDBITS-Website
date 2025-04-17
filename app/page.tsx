@@ -262,7 +262,7 @@ export default function Home() {
                 name: "Vishesh Khare",
                 role: "Team Member",
                 email: "vkhare@terpmail.umd.edu",
-                image: "/vishesh_headshot.jpg",
+                image: "/visheshHeadshot.jpg",
                 linkedin: "https://www.linkedin.com/in/vishesh-khare-b17875211/",
               },
               {
